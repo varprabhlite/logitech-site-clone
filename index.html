@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <img src="images/header-logitech-logo.svg" alt="grey-logitech-logo">
+    <a href="https://www.logitechg.com/en-in" target="_blank"><img src="images/header-logitech-logo.svg" alt="grey-logitech-logo"></a>
     <div class="location">
       <i class="fa-solid fa-earth-asia"></i>
       <span>India</span>
@@ -18,12 +18,14 @@
   <section class="hero"> 
     <nav>
       <a href="index.html"><img src="images/logitech-logo.png" alt="logitech-logo"></a>
-      <div class="nav-links">
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
         <ul>
-          <li>SHOP</li>
-          <li>DISCOVER</li>
-          <li>BUSINESS</li>
-          <li>SUPPORT</li>
+          <li>SHOP <i class="fa-solid fa-chevron-right"></i></li>
+          <li>DISCOVER <i class="fa-solid fa-chevron-right"></i></li>
+          <li>BUSINESS <i class="fa-solid fa-chevron-right"></i></li>
+          <li>SUPPORT <i class="fa-solid fa-chevron-right"></i></li>
         </ul>
       </div>
       <div class="search-bar">
@@ -45,5 +47,39 @@
       </div>
     </div>
   </section>
+
+  <div class="shop-gadgets-grid">
+    <div class="indi-gadgets">
+      <img src="images/tablet-keyboard.webp" alt="  ">
+      <a href="https://www.logitech.com/en-in/products/tablet-keyboards/keys-to-go2-universal.html"><h2>POWERFULLY PORTABLE. FOR TABLETS.</h2></a>
+      <p>A slim, ultra-portable tablet keyboard that goes anywhere.</p>
+      <a class="shop-gadgets-more" href="https://www.logitech.com/en-in/products/tablet-keyboards/keys-to-go2-universal.html">
+        <span>SHOP KEYS-TO-GO 2</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+    </div>
+
+    <div class="indi-gadgets">
+      <img src="images/ipad-keyboard-case.webp" alt="">
+      <a href="https://www.logitech.com/en-in/products/ipad-keyboards/combo-touch-ipad-learn.html"><h2>TAKE iPad FURTHER</h2></a>
+      <p>Type, sketch, view and read with Combo Touch keyboard case for the new iPad Pro and iPad Air.</p>
+      <a class="shop-gadgets-more" href="https://www.logitech.com/en-in/products/tablet-keyboards/keys-to-go2-universal.html">
+        <span>LEARN MORE</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+    </div>
+
+    <div class="indi-gadgets">
+      <img src="images/pop-keyboard.webp" alt="">
+      <a href="https://www.logitech.com/en-in/products/combos/pop-icon-combo.html"><h2>START WITH A POP</h2></a>
+      <p>Add an extra pop to your desk with the POP Icon combo, a wireless keyboard and mouse that are stylish, compact and customizable.</p>
+      <a class="shop-gadgets-more" href="https://www.logitech.com/en-in/products/tablet-keyboards/keys-to-go2-universal.html">
+        <span>SHOP NOW</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+    </div>
+  </div>
 </body>
+
+<script src="script.js"></script>
 </html>

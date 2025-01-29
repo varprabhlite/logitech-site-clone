@@ -1,8 +1,8 @@
 *{
-margin: 0;
-padding: 0;
-font-family: Arial, Helvetica, sans-serif;
-border: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  border: border-box;
 }
 
 header{
@@ -16,8 +16,10 @@ header{
 header img{
   content: url(images/header-logitech-logo.svg);
 }
+
 header img:hover{
   content: url(images/header-logitech-logo-hover.svg);
+  cursor: pointer;
 }
 
 .location{
@@ -27,68 +29,73 @@ header img:hover{
 
 .location span:hover{
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .hero{
-min-height: 75vmin;
-width: 100%;
-background-image: url(images/webcam-background-desktop.webp);
-background-position: center;
-background-size: cover;
-position: relative;
-background-repeat: no-repeat;
-
+  min-height: 75vmin;
+  width: 100%;
+  background-image: url(images/webcam-background-desktop.webp);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
 }
 
 nav img{
-height: 36px;
-width: 118px;
-padding: 30px 0;
+  height: 36px;
+  width: 118px;
+  padding: 30px 0;
 }
 
-nav{
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin: 0 10% ;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10%;
 }
 
 .nav-links{
-flex: 1;
-text-align: center;
+  flex: 1;
+  text-align: center;
 }
 
 .nav-links ul li{
-list-style: none;
-display: inline-block;
-padding: 15px 20px;
-position: relative;
-font-size: 16px;
-font-weight: 600;
-color: white;
-text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links ul li .fa-chevron-right{
+  display: none;
 }
 
 .nav-links ul li:hover{
-background-color: white;
-color: black;
-border-radius: 22px;
+  background-color: white;
+  color: black;
+  border-radius: 22px;
+  cursor: pointer;
 }
 
 .search-bar {
-position: relative;
-display: flex;
-align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .search-bar input {
-height: 30px;
-width: 150px;
-padding: 1px 30px 1px 10px;
-border: none;
-border-radius: 15px;
-color: white;
-background-color: rgba(255, 255, 255, 0.3);
+  height: 30px;
+  width: 150px;
+  padding: 1px 30px 1px 10px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .search-bar input::placeholder{
@@ -98,10 +105,14 @@ background-color: rgba(255, 255, 255, 0.3);
 }
 
 .search-bar i {
-color: white;
-position: absolute;
-right: 10px;
-z-index: 1;
+  color: white;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+}
+
+.search-bar input:hover, .search-bar i:hover{
+  cursor: pointer;
 }
 
 .user-icon{
@@ -116,7 +127,7 @@ z-index: 1;
   color: white;
 }
 
-.webcam-ad{
+.webcam-ad {
   margin-left: 10%;
   width: 30%;
   padding: 20px 0;
@@ -125,13 +136,14 @@ z-index: 1;
 .webcam-ad h1{
   color: white;
   font-size: 65px;
+  word-wrap: break-word;
 }
 
 .webcam-ad p{
   color: white;
   font-size: 19px;
-  line-height: 30px;
-  margin: 24px 0;
+  line-height: 1.5;
+  margin: 18px 0 28px 0;
 }
 
 .webcam-more{
@@ -143,9 +155,7 @@ z-index: 1;
 .webcam-more-buttons{
   color: black;
   text-decoration: none;
-  border-style: solid;
-  border-color: white;
-  border-width: 2px;
+  border: 2px solid white;
   background-color: white;
   padding: 18px 36px;
 }
@@ -153,8 +163,201 @@ z-index: 1;
 .webcam-more-buttons:hover{
   background-color: transparent;
   color: white;
-  border-style: solid;
-  border-color: white;
-  border-width: 2px;
   transition: 0.1s;
 }
+
+.shop-gadgets-grid {
+  margin: 90px 8% 0 10%;
+  width: 80%;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.indi-gadgets {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.indi-gadgets img {
+  width: 100%;
+  margin-bottom: 8px;
+  height: auto;
+  max-height: 55vh;
+  object-fit: cover;
+}
+
+.indi-gadgets a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.indi-gadgets a:hover{
+  text-decoration: underline;
+}
+
+.indi-gadgets p{
+  width: 80%;
+  margin-top: 10px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+nav .fa-bars, nav .fa-xmark{
+  display: none;
+}
+
+@media(max-width: 1024px){ 
+  header{
+    display: none
+  }
+
+  .search-bar input{
+    display: none;
+  }
+ 
+  .user-icon{
+    display: none;
+  }
+
+  nav .fa-bars{
+    font-size: 20px;
+    display: block;
+    color: white;
+    position: absolute;
+  }
+
+  nav .fa-xmark{
+    font-size: 30px;
+    padding: 3%;
+    background-color: #f4f4f4;
+    border-left: 2px solid grey;
+    display: inline-block;
+    color: grey;
+    transform: translate(90vmin);
+  }
+
+  nav{
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    height: 10vmin;
+  }
+
+  nav img{
+    padding: 0 200px 0 300px;
+  }
+
+  .hero{
+    min-height: 75vmin;
+    width: 1024px;
+    background-image: url(images/webcam-background-tablet.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+  }
+
+  .nav-links ul li{
+    display: block;
+    color: black;
+  }
+
+  .nav-links{
+    background-color: #f4f4f4;
+    position: absolute;
+    height: 100vh;
+    width: 90%;
+    top: 0;
+    left: -100%;
+    text-align: left;
+    z-index: 2;
+    transition: 0.2s;
+  }
+
+  .webcam-ad {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .webcam-more {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  nav img{
+    padding: 0;
+    transform: translate(30vmin,0);
+  }
+
+  .hero{
+    min-height: 75vmin;
+    width: 100%;
+    background-image: url(images/webcam-background-mobile.webp);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+  }
+  .webcam-ad {
+      width: 60%;
+  }
+
+  .webcam-ad h1 {
+      font-size: 42px;
+  }
+
+  .webcam-ad p {
+      font-size: 16px;
+  }
+
+  .webcam-more {
+    height: 60px;
+    width: 50%;
+    max-width: 360px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .webcam-more-buttons {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .shop-gadgets-grid {
+      flex-direction: column;
+      margin: 40px 5% 0 5%;
+      width: 90%;
+  }
+
+  .indi-gadgets {
+      width: 100%;
+      margin-bottom: 30px;
+  }
+
+  .indi-gadgets img {
+      width: 100%;
+      height: auto;
+  }
+
+  .indi-gadgets h2 {
+      font-size: 16px;
+      margin-top: 10px;
+  }
+}
+
+
+
+
