@@ -136,20 +136,21 @@ nav {
 .webcam-ad h1{
   color: white;
   font-size: 65px;
-  word-wrap: break-word;
+  margin-top: 20px;
 }
 
 .webcam-ad p{
   color: white;
-  font-size: 19px;
-  line-height: 1.5;
-  margin: 18px 0 28px 0;
+  font-size: 20px;
+  line-height: 1.75;
+  margin: 20px 0 30px 0;
 }
 
 .webcam-more{
   width: 360px;
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
 }
 
 .webcam-more-buttons{
