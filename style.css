@@ -10,7 +10,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 10%
+  margin: 0 10%;  
 }
 
 header img{
@@ -177,7 +177,6 @@ nav {
 
 .indi-gadgets {
   flex: 1;
-  min-width: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -314,7 +313,7 @@ nav .fa-bars, nav .fa-xmark{
 
   .hero {
     min-height: 75vmin;
-    width: 1024px; 
+    width: 100%; 
     background-image: url('images/webcam-background-tablet.webp');
     background-position: center;
     background-size: cover;
@@ -356,7 +355,8 @@ nav .fa-bars, nav .fa-xmark{
   }
 
   .shop-gadgets-grid{
-    margin-left: 5vmin;
+    width: 90%;
+    margin: 5%;
   }
 
   .better-design-banner {
@@ -364,7 +364,7 @@ nav .fa-bars, nav .fa-xmark{
     min-height: 600px;  
     background-attachment: scroll;  
     background-size: cover;
-    width: 1024px;
+    width: 100%;
   }
 
   .better-design-content{
@@ -493,7 +493,7 @@ nav .fa-bars, nav .fa-xmark{
     background-size: cover;
     width: 100%;
 }
-
+  
 }
 
 

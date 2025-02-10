@@ -14,12 +14,4 @@ function hideMenu() {
   navbar.style.height = "10vmin";
 }
 
-function checkWindowSize() {
-  if (window.innerWidth >= 1024) {
-    navbar.style.height = "10vmin";
-  }
-}
 
-window.addEventListener("resize", checkWindowSize);
-
-checkWindowSize();
