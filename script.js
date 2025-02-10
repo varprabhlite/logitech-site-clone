@@ -5,7 +5,7 @@ let navbar = document.getElementById("navbar");
 function showMenu() {
   navLinks.style.left = "0";
   entireBody.style.position = "fixed";
-  navbar.style.height = "100vh";
+  navbar.style.height = "100%";
 }
 
 function hideMenu() {
