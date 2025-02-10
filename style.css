@@ -308,7 +308,7 @@ nav .fa-bars, nav .fa-xmark{
   nav a{
     height: 30px;
     width: auto;
-    transform: translate(42vmin,-4vmin);
+    transform: translate(34vmin, -4vmin);
   }
 
   .hero {
@@ -403,7 +403,7 @@ nav .fa-bars, nav .fa-xmark{
 
   nav a{
     padding: 0;
-    height: 30px;
+    height: 3vmin;
     width: auto;
     transform: translate(30vmin, -5vmin);
   }
