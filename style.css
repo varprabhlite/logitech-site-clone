@@ -214,42 +214,49 @@ nav .fa-bars, nav .fa-xmark{
   display: none;
 }
 
-.better-design-banner{
-  margin-top: 50px;
-  cursor: pointer;
-  height: 85vh;
-  width: 100%;
-  background-image: url(images/better-design-desktop.webp);
-  background-position: center;
-  background-size: cover;
+.carousel-container{
   position: relative;
-  background-repeat: no-repeat;
-  text-align: center;
-  overflow: hidden;
+  height: 85vh;
 }
 
-.better-design-content{
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10% 35%;
+.carousel-container button{
+  position: absolute;
+  z-index: 2;
+  background: none;
+  font-size: 4rem;
+  border: none;
+  top:55%;
+  padding: 1rem 2rem;
 }
 
-.better-design-content h1{
+.carousel-container button:hover{
+  cursor: pointer;
+}
+
+.carousel-container .left-chevron{
+  left: 1rem;
+}
+
+.carousel-container .right-chevron{
+  right: 1rem
+}
+
+/* special code for design with sustainability slide with unique colors*/
+.carousel-item .carousel-content .sustainability-header{
   color: #303133;
-  font-size: 70px;
+  font-size: clamp(45px, 4vw, 68px); 
 }
 
-.better-design-content p{
-  width: 400px;
-  margin-top: 30px;
-  margin-bottom: 24px;
-  font-size: 24px;
+.carousel-item .carousel-content .sustainability-info{
+  color: #303133;
+  font-size: clamp(1rem, 1.5vw, 24px);
   line-height: 1.5;
+  margin: 30px 0 24px;
 }
 
-.better-design-content a{
+.carousel-item .carousel-content .sustainability-learn-more{
+  font-size: clamp(0.5rem, 1.5vw, 1rem);
+  width: 120px;
   font-weight: bold;
   color: white;
   text-decoration: none;
@@ -258,11 +265,108 @@ nav .fa-bars, nav .fa-xmark{
   padding: 20px 40px;
 }
 
-.better-design-content a:hover{
+.carousel-item .carousel-content .sustainability-learn-more:hover{
   background-color: transparent;
-  border: 2px solid #303133;
   color: #303133;
-  transition: 0.2s;
+  transition: 0.2s ease;
+}
+
+.carousel-wrapper .carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 85vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.carousel-wrapper .carousel-item .carousel-content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.carousel-item .carousel-content h1{
+  color: white;
+  font-size: clamp(45px, 4vw, 68px);
+}
+
+.carousel-item .carousel-content p{
+  color:white;
+  font-size: clamp(1rem, 1.5vw, 24px);
+  line-height: 1.5;
+  width: 60%;
+  margin: 30px 0 24px;
+}
+
+.carousel-item .carousel-content a{
+  font-size: clamp(0.5rem, 1.5vw, 1rem);
+  width: auto;
+  font-weight: bold;
+  color: #303133;
+  text-decoration: none;
+  background-color: white;
+  border: 2px solid white;
+  padding: 20px 40px;
+  z-index: 2;
+}
+
+.carousel-item .carousel-content a:hover{
+  background-color: transparent;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.carousel-wrapper .carousel-item[data-active]{
+  opacity: 1;
+}
+
+.carousel-item:nth-child(1) {
+  background-image: url("images/carousel-better-design.webp");
+}
+
+.carousel-item:nth-child(2) {
+  background-image: url("images/carousel-future-positive.webp");
+}
+
+.carousel-item:nth-child(3) {
+  background-image: url("images/carousel-design-awards.webp");
+}
+
+.carousel-item:nth-child(4) {
+  background-image: url("images/carousel-logitech-story.webp");
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 1%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border: solid white 2px;
+  cursor: pointer;
+}
+
+.carousel-dots .dot.active {
+  background-color: transparent;
 }
 
 @media(max-width: 1024px){ 
@@ -359,48 +463,12 @@ nav .fa-bars, nav .fa-xmark{
     margin: 5%;
   }
 
-  .better-design-banner {
-    height: 80vh;
-    min-height: 600px;  
-    background-attachment: scroll;  
-    background-size: cover;
-    width: 100%;
-  }
-
-  .better-design-content{
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20% 5%;
-  }
-
-  .better-design-content h1{
-    color: #303133;
-    font-size: 45px;
-  }
-  
-  .better-design-content p{
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 24px;
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
-  .better-design-content a{
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-    background-color: #303133;
-    border: 2px solid #303133;
-    padding: 20px 40px;
+  .carousel-container button{
+    display: none;
   }
 }
 
 @media screen and (max-width: 720px) {
-
   nav a{
     padding: 0;
     height: 3vmin;
@@ -466,6 +534,7 @@ nav .fa-bars, nav .fa-xmark{
   }
 
   .shop-gadgets-grid {
+      z-index: 1;
       flex-direction: column;
       margin: 40px 5% 0 5%;
       width: 90%;
@@ -485,15 +554,6 @@ nav .fa-bars, nav .fa-xmark{
       font-size: 16px;
       margin-top: 10px;
   }
-
-  .better-design-banner {
-    height: 90vh;
-    min-height: 500px;  /* Slightly smaller minimum height for mobile */
-    background-attachment: scroll;
-    background-size: cover;
-    width: 100%;
-}
-  
 }
 
 
